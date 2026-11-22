@@ -23,6 +23,7 @@ COMPILE_SCRIPT()
 	clear
 	read -p "Path to script to compile: " CMD
 	$ECOMPILE_PATH -C "${ECOMPILE_CONF_PATH}" "${CMD}"
+	read -r -p "Press Enter to continue..."
 	RETURN_TO_MENU
 	}
 
@@ -32,6 +33,7 @@ COMPILE_DIRECTORY()
 	clear
 	read -p "Path to DIRECTORY: " CMD
 	"${ECOMPILE_PATH}" -A -b -f -C "${ECOMPILE_CONF_PATH}" "${CMD}"
+	read -r -p "Press Enter to continue..."
 	RETURN_TO_MENU
 	}
 
@@ -39,6 +41,7 @@ COMPILE_DIRECTORY()
 COMPILE_ALL_SCRIPTS()
 	{
 	"${ECOMPILE_PATH}" -A -b -f -C "${ECOMPILE_CONF_PATH}"
+	read -r -p "Press Enter to continue..."
 	RETURN_TO_MENU
 	}
 
@@ -53,6 +56,7 @@ COMPILE_ALL_SCRIPTS_OPTXT()
 	echo "Compiler log files: ./log/"
 	"${ECOMPILE_PATH}" -A -b -f -T -C "${ECOMPILE_CONF_PATH}" >log/ecompile.log 2>log/ecompile_error.log
 	echo -e "\nCompilation complete."
+	read -r -p "Press Enter to continue..."
 	RETURN_TO_MENU
 	}
 
