@@ -7,5 +7,5 @@ ECOMPILE_PATH="./scripts/ecompile"
 ECOMPILE_CONF_PATH="./scripts/ecompile-linux.cfg"
 
 $ECOMPILE_PATH -b -r -C "${ECOMPILE_CONF_PATH}" 2>&1 > log/ecompile-fast.log
-
+read -r -p "Press Enter to continue..."
 exit 0
